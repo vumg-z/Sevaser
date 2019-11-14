@@ -22,7 +22,7 @@ git clone https://github.com/UrielMendozaG/Vaquetapp.git
 2. Abre index.html
 
 ```
-gansolina/index.html
+vaquetapp/index.html
 ```
 
 3. Explora y contribuye
