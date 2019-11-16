@@ -11,7 +11,7 @@ function App() {
       <Card tipo={'Hamburgesas'}> </Card>
       <Card tipo={'Posada'}> </Card>
       <Card tipo={'Fiesta de Cumpleaños'}> </Card>
-      <Card tipo={'Fiesta de Cumpleaños'}> </Card>
+      <Card tipo={'Fiesta Sorpresa'}> </Card>
     </header>
   );
 }

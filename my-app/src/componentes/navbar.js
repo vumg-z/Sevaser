@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <Container>
       <Row className="navbar">
-        <Col>Vawebapp</Col>
+        <Col>Sevaser</Col>
       </Row>
     </Container>
   );
