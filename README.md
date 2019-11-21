@@ -32,7 +32,4 @@ personas.
 
 #### Capturas
 
-1. Home ![](images/home.jpg)
-2. People ![](images/overview.jpg)
-3. Overview ![](images/people.jpg)
-4. Shopping ![](images/shopping.jpg)
+1. Overview ![](images/overview.jpg)
