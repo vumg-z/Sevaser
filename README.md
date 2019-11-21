@@ -32,8 +32,7 @@ personas.
 
 #### Capturas
 
-1. HOME ![](images/home.jpg)
-2. PEOPLE ![](images/overview.jpg)
-3. PRESUPUESTO ![](images/presupuestos.jpg)
-4. OVERVIEW ![](images/overview.jpg)
-5. SHOPPING ![](images/shopping.jpg)
+1. Home ![](images/home.jpg)
+2. People ![](images/overview.jpg)
+3. Overview ![](images/people.jpg)
+4. Shopping ![](images/shopping.jpg)
