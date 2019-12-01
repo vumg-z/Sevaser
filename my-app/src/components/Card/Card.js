@@ -38,6 +38,13 @@ export default function MediaCard(props) {
           <Typography variant="body2" color="textSecondary" component="p">
             {props.tipo}
           </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {props.data}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="h2">
+            {props.evento}
+          </Typography>
+         
         </CardContent>
       </CardActionArea>
     </Card>

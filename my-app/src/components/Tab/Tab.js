@@ -9,7 +9,7 @@ import Box from "@material-ui/core/Box";
 import CakeIcon from "@material-ui/icons/CakeOutlined";
 import InfoIcon from "@material-ui/icons/InfoOutlined";
 import ShopIcon from "@material-ui/icons/ShoppingCartOutlined";
-import Card from "../Card/Card"
+import Card from "../Card/Card";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -80,18 +80,26 @@ export default function ScrollableTabsButtonAuto() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <Card texto={'Carne Asada'} tipo={"Fiesta"}></Card>
-        <Card texto={'Hamburguesada'} tipo={"Fiesta"}></Card>
-        <Card texto={'Fiesta de Cumpleaños'} tipo={"Fiesta"}></Card>
-        <Card texto={'Fiesta Sorpresa'} tipo={"Fiesta"}></Card>
-        <Card texto={'Posada'} tipo={"Fiesta"}></Card>
-        <Card texto={'Despedida de Soltero'} tipo={"Fiesta"}></Card>
-        <Card texto={'Peda Masiva'} tipo={"Fiesta"}></Card>
-        <Card texto={'Reu con los compas'} tipo={"Fiesta"}></Card>
-        <Card texto={'Algo tranqui'} tipo={"Fiesta"}></Card>
+        <Card texto={"Carne Asada"} tipo={"Fiesta"}></Card>
+        <Card texto={"Hamburguesada"} tipo={"Fiesta"}></Card>
+        <Card texto={"Fiesta de Cumpleaños"} tipo={"Fiesta"}></Card>
+        <Card texto={"Fiesta Sorpresa"} tipo={"Fiesta"}></Card>
+        <Card texto={"Posada"} tipo={"Fiesta"}></Card>
+        <Card texto={"Despedida de Soltero"} tipo={"Fiesta"}></Card>
+        <Card texto={"Peda Masiva"} tipo={"Fiesta"}></Card>
+        <Card texto={"Reu con los compas"} tipo={"Fiesta"}></Card>
+        <Card texto={"Algo tranqui"} tipo={"Fiesta"}></Card>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Card data={"16 Nov"} evento={"Carne Asada"}></Card>
+        <Card data={"Gasto estimado"} evento={"$1125"}></Card>
+        <Card data={"Personas"} evento={"25"}></Card>
+        <Card data={"Costo por persona"} evento={"$45"}></Card>
+        <Card data={"Comida principal"} evento={"Arrachera Asada"}></Card>
+        <Card data={"Bebida principal"} evento={"Cerveza"}></Card>
+        <Card data={"Botana principal"} evento={"Churros"}></Card>
+        <Card data={"Desechables"} evento={"Baratos"}></Card>
+        <Card evento={"Lista de compras"}></Card>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
