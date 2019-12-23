@@ -31,5 +31,4 @@ personas.
          disfruta :)
 
 #### Capturas
-
-1. Overview ![](images/overview.jpg)
+![](images/overview.jpg)
