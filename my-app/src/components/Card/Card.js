@@ -6,6 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Set from '../Data/Set'
 
 const useStyles = makeStyles({
   card: {
@@ -22,7 +23,7 @@ export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} onClick={()=>Set(props.texto)}>
       <CardActionArea>
       {/* <CardMedia
           component="img"

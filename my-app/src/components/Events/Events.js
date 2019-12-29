@@ -1,11 +1,10 @@
 import React from "react";
 import Card from "../Card/Card";
 
-
 export default function EventsList() {
   return (
     <div>
-      <Card texto={"Carne Asada"} tipo={"Fiesta"}></Card>
+      <Card texto={"Carne Asada"} tipo={"Fiesta"} ></Card>
       <Card texto={"Hamburguesada"} tipo={"Fiesta"}></Card>
       <Card texto={"Fiesta de Cumpleaños"} tipo={"Fiesta"}></Card>
       <Card texto={"Fiesta Sorpresa"} tipo={"Fiesta"}></Card>
