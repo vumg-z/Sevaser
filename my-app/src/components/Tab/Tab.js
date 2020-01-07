@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -12,6 +12,7 @@ import ShopIcon from "@material-ui/icons/ShoppingCartOutlined";
 import Events from "../Events/Events";
 import Overview from "../Overview/Overview";
 import Shopping from "../Shopping/Shopping"
+import EventosData from "../../data/data"
 
 
 function TabPanel(props) {
@@ -62,6 +63,26 @@ export default function ScrollableTabsButtonAuto() {
     setValue(newValue);
   };
 
+  // estado del "evento" a evento me refiero al tipo de fiesta e.g "carne asada", "hamburguesas" etc
+
+  const [evento, setEvento] = React.useState("Carne Asada")
+
+  // handle change del evento, en esta lineas de codigo voy a manejar la eleccion del evento 
+
+  function handleClick(evento) {
+    setEvento(evento)
+  }
+
+  //data de los eventos
+
+  const [eventosData, setEventosData] = React.useState([])
+
+  // estado para agarrar la data de los eventos
+
+  useEffect(()=> {
+    setEventosData(EventosData)
+  }, [])
+
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -83,10 +104,10 @@ export default function ScrollableTabsButtonAuto() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <Events />
+        <Events data={eventosData} handleClick={handleClick} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Overview />
+        <Overview evento={evento} />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Shopping/>

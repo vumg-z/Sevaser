@@ -1,0 +1,22 @@
+[
+    {
+        "id":0,
+        "nombre": "Hamburguesas"
+    },
+    {
+        "id": 1,
+        "nombre": "Carne Asada"
+    },
+    {
+        "id": 2,
+        "nombre" : "Fiesta de Cumpleaños"
+    },
+    {
+        "id": 3,
+        "nombre": "Fiesta Sorpresa"
+    },
+    {
+        "id": 4,
+        "nombre": "Posada"
+    }
+]
