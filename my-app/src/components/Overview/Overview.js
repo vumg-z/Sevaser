@@ -1,29 +1,57 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
+import { ListItemSecondaryAction } from "@material-ui/core";
+
+export default function EventList(props) {
+
+  // debo de poner el estado de las bebidas y las botanas
+
+  
 
 
-export default function EventList(props){
+  // debo de tener un segundo estado que renderize el componente que contenga las comidas principales,
+  // esto para no tener que renderizar todo los componentes de una.
 
-  function handleClick(){
+  const [comidaPrincipal, setComidaPrincipal] = useState([])
+
+  useEffect(()=>{
+    const comidas = props.data.filter(item => item.nombre == props.evento )
+    if(comidas[0] != undefined)
+      setComidaPrincipal(comidas[0].principal[0]);
+  })
+
+  function handleClick() {
     // alert("no pasa nada bb")
   }
 
-  return(
+  // cuando se haga click en el evento se tiene que renderizar las variantes del evento tambien.
+
+  // console.log(props.bebidasData)
+  // console.log(props.botanasData)
+
+
+  return (
     <div>
-      <Card data={"16 Nov"} evento={props.evento} action={handleClick}></Card>
-      <Card data={"Gasto estimado"} evento={"$1125"} action={handleClick}></Card>
-      <Card data={"Personas"} evento={"25"} action={handleClick}></Card>
-      <Card data={"Costo por persona"} evento={"$45"} action={handleClick}></Card>
-      <Card data={"Comida principal"} evento={"Arrachera Asada"} action={handleClick}></Card>
-      <Card data={"Bebida principal"} evento={"Cerveza"} action={handleClick}></Card>
-      <Card data={"Botana principal"} evento={"Churros"} action={handleClick}></Card>
-      <Card data={"Desechables"} evento={"Baratos"} action={handleClick}></Card>
-      <Card evento={"Lista de compras"} action={handleClick}></Card>
+      <Card data={"16 Nov"} evento={props.evento} action={handleClick} />
+      <Card
+        data={"Gasto estimado"}
+        evento={props.precio}
+        action={handleClick}
+      />
+      <Card data={"Personas"} evento={"25"} action={handleClick} />
+      <Card data={"Costo por persona"} evento={"$45"} action={handleClick} />
+      <Card
+        data={"Comida principal"}
+        evento={comidaPrincipal}
+        action={handleClick}
+      />
+      <Card data={"Bebida principal"} evento={"Cerveza"} action={handleClick} />
+      <Card data={"Botana principal"} evento={"Churros"} action={handleClick} />
+      <Card data={"Desechables"} evento={"Baratos"} action={handleClick} />
+      <Card evento={"Lista de compras"} action={handleClick} />
     </div>
-  )
+  );
 }
-
-
 
 // export default function EventsList() {
 //   return (

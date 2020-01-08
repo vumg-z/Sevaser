@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -11,9 +11,10 @@ import InfoIcon from "@material-ui/icons/InfoOutlined";
 import ShopIcon from "@material-ui/icons/ShoppingCartOutlined";
 import Events from "../Events/Events";
 import Overview from "../Overview/Overview";
-import Shopping from "../Shopping/Shopping"
-import EventosData from "../../data/data"
-
+import Shopping from "../Shopping/Shopping";
+import EventosData from "../../data/data";
+import BebidasData from "../../data/bebidas";
+import BotanasData from "../../data/botanas";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,23 +66,31 @@ export default function ScrollableTabsButtonAuto() {
 
   // estado del "evento" a evento me refiero al tipo de fiesta e.g "carne asada", "hamburguesas" etc
 
-  const [evento, setEvento] = React.useState("Carne Asada")
+  const [evento, setEvento] = React.useState("Carne Asada");
 
-  // handle change del evento, en esta lineas de codigo voy a manejar la eleccion del evento 
+  // precio en total es igual a la suma entre todos los precios de los ingredientes
+
+  const [precio, setPrecio] = React.useState(0);
+
+  // handle change del evento, en esta lineas de codigo voy a manejar la eleccion del evento
 
   function handleClick(evento) {
-    setEvento(evento)
+    setEvento(evento);
   }
 
-  //data de los eventos
+  // Estado de la data de los eventos, botanas, y bebidas
 
-  const [eventosData, setEventosData] = React.useState([])
+  const [eventosData, setEventosData] = React.useState([]);
+  const [botanasData, setBotanasData] = React.useState([]);
+  const [bebidasData, setBebidasData] = React.useState([]);
 
-  // estado para agarrar la data de los eventos
+  // estado para agarrar la data de los eventos, botanas, y bebidas
 
-  useEffect(()=> {
-    setEventosData(EventosData)
-  }, [])
+  useEffect(() => {
+    setEventosData(EventosData);
+    setBotanasData(BotanasData);
+    setBebidasData(BebidasData);
+  }, []);
 
   return (
     <div className={classes.root}>
@@ -107,10 +116,16 @@ export default function ScrollableTabsButtonAuto() {
         <Events data={eventosData} handleClick={handleClick} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Overview evento={evento} />
+        <Overview
+          evento={evento}
+          precio={precio}
+          data={eventosData}
+          botanasData={botanasData}
+          bebidasData={bebidasData}
+        />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Shopping/>
+        <Shopping />
       </TabPanel>
     </div>
   );

@@ -15,3 +15,5 @@ const bebidas = [
         precio: 200
     }
 ]
+
+export default bebidas;
