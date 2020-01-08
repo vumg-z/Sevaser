@@ -13,7 +13,7 @@ export default function EventsList(props){
   }else{
 
     const components = props.data.map((item) => (
-      <Card texto={item.nombre} key={item.id} tipo={item.tipo} action={props.handleClick} />
+      <Card texto={item.nombre} key={item.id} tipo={item.tipo} action={props.handleClick} index={1}/>
     ))
 
     return <div>{components}</div>;

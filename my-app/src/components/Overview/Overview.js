@@ -18,7 +18,7 @@ export default function EventList(props){
       <Card data={"Bebida principal"} evento={"Cerveza"} action={handleClick}></Card>
       <Card data={"Botana principal"} evento={"Churros"} action={handleClick}></Card>
       <Card data={"Desechables"} evento={"Baratos"} action={handleClick}></Card>
-      <Card evento={"Lista de compras"} action={handleClick}></Card>
+      <Card evento={"Lista de compras"} action={props.handleClick} index={2}></Card>
     </div>
   )
 }

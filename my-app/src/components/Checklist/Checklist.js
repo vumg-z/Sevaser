@@ -37,7 +37,7 @@ export default function CheckboxListSecondary(props) {
     <div>
       <h4>{props.title}</h4>  
       <List dense className={classes.root}>
-        {[0, 1, 2, 3].map(value => {
+        {[0, 1, 2, 3, 4].map(value => {
           const labelId = `checkbox-list-secondary-label-${value}`;
           return (
             <ListItem key={value} button>

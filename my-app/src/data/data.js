@@ -2,7 +2,7 @@ const eventos = [
   {
     id: 0,
     nombre: "Carne Asada",
-    tipo: "Fiesta"
+    tipo: "Fiesta",
   },
   {
     id: 1,
