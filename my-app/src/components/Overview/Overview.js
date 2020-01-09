@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import { ListItemSecondaryAction } from "@material-ui/core";
 
+
 export default function EventList(props) {
 
   // debo de poner el estado de las bebidas y las botanas
-
-  
-
+  const [botana, setBotana] = useState("");
+  const [bebida, setBebida] = useState("");
 
   // debo de tener un segundo estado que renderize el componente que contenga las comidas principales,
   // esto para no tener que renderizar todo los componentes de una.
@@ -15,10 +15,20 @@ export default function EventList(props) {
   const [comidaPrincipal, setComidaPrincipal] = useState([])
 
   useEffect(()=>{
-    const comidas = props.data.filter(item => item.nombre == props.evento )
+    // hago un nuevo arreglo comidas donde almaceno las comidas secundarias filtrando de la data (que es un arreglo de diferentes eventos)
+    // el unico elemento que necesitamos
+    // props.data es toda la data, item.nombre es cada elemento en el arreglo checando su propiedad nombre, cuando sea igual 
+    // al evento que estamos mandando a llamar desde el componente events es cuando me quedo con ese elemento. 
+    // item.nombre == props. evento  <- esto
+    // nombre: "Carne Asada" == Carne Asada 
+    const comidas = props.data.filter(item => item.nombre == props.evento)
     if(comidas[0] != undefined)
       setComidaPrincipal(comidas[0].principal[0]);
+
+    
   })
+
+
 
   function handleClick() {
     // alert("no pasa nada bb")

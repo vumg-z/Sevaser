@@ -88,8 +88,6 @@ export default function ScrollableTabsButtonAuto() {
 
   useEffect(() => {
     setEventosData(EventosData);
-    setBotanasData(BotanasData);
-    setBebidasData(BebidasData);
   }, []);
 
   return (
