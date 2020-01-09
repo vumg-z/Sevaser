@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function CheckboxListSecondary(props) {
   const classes = useStyles();
-  const [checked, setChecked] = React.useState([1]);
+  const [checked, setChecked] = React.useState([-1]);
 
   const handleToggle = value => () => {
     const currentIndex = checked.indexOf(value);

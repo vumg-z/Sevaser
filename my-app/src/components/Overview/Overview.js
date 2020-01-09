@@ -15,12 +15,17 @@ export default function EventList(props) {
 
   const [precioEntrePersona, setPrecioEntrePersona] = useState(0);
 
+  // la eleccion de perosnas causara un producto entre su cantidad y el precio estimado de los productos???
+
+  const [cantidadDePersonas, setCantidadDePersonas] = useState(25);
+
   // debo de tener un segundo estado que renderize el componente que contenga las comidas principales,
   // esto para no tener que renderizar todo los componentes de una.
 
   const [comidaPrincipal, setComidaPrincipal] = useState([])
 
   useEffect(()=>{
+
     // hago un nuevo arreglo comidas donde almaceno las comidas secundarias filtrando de la data (que es un arreglo de diferentes eventos)
     // el unico elemento que necesitamos
     // props.data es toda la data, item.nombre es cada elemento en el arreglo checando su propiedad nombre, cuando sea igual 
@@ -42,7 +47,6 @@ export default function EventList(props) {
   })
 
 
-
   function handleClick() {
     // alert("no pasa nada bb")
   }
@@ -61,8 +65,8 @@ export default function EventList(props) {
         evento={props.precio}
         action={handleClick}
       />
-      <Card data={"Personas"} evento={"25"} action={handleClick} />
-      <Card data={"Costo por persona"} evento={"$45"} action={handleClick} />
+      <Card data={"Personas"} evento={cantidadDePersonas} action={handleClick} />
+      <Card data={"Costo por persona"} evento={precioEntrePersona} action={handleClick} />
       <Card
         data={"Comida principal"}
         evento={comidaPrincipal}
@@ -76,18 +80,4 @@ export default function EventList(props) {
   );
 }
 
-// export default function EventsList() {
-//   return (
-//     <div>
-//       <Card data={"16 Nov"} evento={"Carne Asada"}></Card>
-//       <Card data={"Gasto estimado"} evento={"$1125"}></Card>
-//       <Card data={"Personas"} evento={"25"}></Card>
-//       <Card data={"Costo por persona"} evento={"$45"}></Card>
-//       <Card data={"Comida principal"} evento={"Arrachera Asada"}></Card>
-//       <Card data={"Bebida principal"} evento={"Cerveza"}></Card>
-//       <Card data={"Botana principal"} evento={"Churros"}></Card>
-//       <Card data={"Desechables"} evento={"Baratos"}></Card>
-//       <Card evento={"Lista de compras"}></Card>
-//     </div>
-//   );
-// }
+
