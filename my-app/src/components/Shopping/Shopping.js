@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Checklist from "../Checklist/Checklist";
+import Button from "../Button/Button"
 
 export default function EventsList(props) {
   // playground
 
   // console.log(props.data)
 
-  let evento = "";
+  let evento = props.evento
 
   // Tengo que usar use state
 
@@ -43,7 +44,8 @@ export default function EventsList(props) {
       <Checklist title="Comida" data={comida} />
       <Checklist title="Bebidas" data={bebidas} />
       <Checklist title="Esenciales" data={esenciales} />
-      <Checklist title="Botana" data={botanas} />
+      <Checklist title="Botana" data={botanas}  />
+      <Button  action={props.handleClick} texto={evento} index={2}/>
     </div>
   );
 }

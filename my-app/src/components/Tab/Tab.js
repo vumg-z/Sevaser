@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ScrollableTabsButtonAuto() {
   const classes = useStyles();
-  
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -81,9 +81,9 @@ export default function ScrollableTabsButtonAuto() {
   // handle change del evento, en esta lineas de codigo voy a manejar la eleccion del evento
 
   function handleClick(evento, value) {
-    setEvento(evento)
+    setEvento(evento);
     setValue(value);
-    console.log(value)
+    // console.log(value);
   }
 
   // Estado de la data de los eventos, botanas, y bebidas DATOS
@@ -116,14 +116,23 @@ export default function ScrollableTabsButtonAuto() {
           aria-label="scrollable auto tabs example"
         >
           <Tab icon={<CakeIcon />} aria-label="phone" {...a11yProps(0)} />
-          <Tab icon={<InfoIcon />} aria-label="favorite" {...a11yProps(1)} />
-          <Tab icon={<ShopIcon />} aria-label="person" {...a11yProps(2)} />
+          <Tab icon={<ShopIcon />} aria-label="person" {...a11yProps(1)} />
+          <Tab icon={<InfoIcon />} aria-label="favorite" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
         <Events data={eventosData} handleClick={handleClick} />
       </TabPanel>
       <TabPanel value={value} index={1}>
+        <Shopping
+          evento={evento}
+          bebida={bebida}
+          botana={botana}
+          data={eventosData}
+          handleClick={handleClick}
+        />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
         <Overview
           evento={evento}
           bebida={bebida}
@@ -133,14 +142,6 @@ export default function ScrollableTabsButtonAuto() {
           botanasData={botanasData}
           bebidasData={bebidasData}
           handleClick={handleClick}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <Shopping
-          evento={evento}
-          bebida={bebida}
-          botana={botana}
-          data={eventosData}
         />
       </TabPanel>
     </div>
