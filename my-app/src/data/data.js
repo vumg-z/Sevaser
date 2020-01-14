@@ -3,7 +3,8 @@ const eventos = [
     id: 0,
     nombre: "Carne Asada",
     tipo: "Fiesta",
-    principal: ["Arrachera", "Peinecillo", "Carnaza"]
+    principal: ["Arrachera", "Peinecillo", "Carnaza"],
+    url: "https://i.imgur.com/E0eBt9M.jpg",
   },
   {
     id: 1,
@@ -13,7 +14,8 @@ const eventos = [
       "Hamburguesas de Res",
       "Hamburguesas Vegetariana",
       "Hamburguesas de Pollo"
-    ]
+    ],
+    url: "https://tvpacifico.mx/recetas/intranet/images/recipes/344-363.jpg"
   },
   // {
   //   id: 2,
