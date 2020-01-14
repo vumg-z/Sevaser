@@ -8,7 +8,9 @@ export default function EventsList(props) {
     return <div>loading</div>;
   } else {
 
-    const components = props.data.map(item => (
+    const dataClean = props.data.filter(item => item.tipo == "Fiesta")
+    
+    const components = dataClean.map(item => (
       <Card
         texto={item.nombre}
         key={item.id}

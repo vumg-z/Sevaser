@@ -68,9 +68,9 @@ export default function ScrollableTabsButtonAuto() {
 
   const [evento, setEvento] = React.useState("Carne Asada");
 
-  // estado de las bebidas que vamos a elegir y botanas 
+  // estado de las bebidas que vamos a elegir y botanas
 
-  const [bebida , setBebida] = React.useState("Cerveza")
+  const [bebida, setBebida] = React.useState("Cerveza");
   const [botana, setBotana] = React.useState("Churros");
 
   // precio en total es igual a la suma entre todos los precios de los ingredientes
@@ -93,8 +93,8 @@ export default function ScrollableTabsButtonAuto() {
 
   useEffect(() => {
     setEventosData(EventosData);
-    setBotanasData(BotanasData)
-    setBebidasData(BebidasData)
+    setBotanasData(BotanasData);
+    setBebidasData(BebidasData);
   }, []);
 
   return (
@@ -132,7 +132,12 @@ export default function ScrollableTabsButtonAuto() {
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Shopping evento={evento} bebida={bebida} botana={botana}/>
+        <Shopping
+          evento={evento}
+          bebida={bebida}
+          botana={botana}
+          data={eventosData}
+        />
       </TabPanel>
     </div>
   );
