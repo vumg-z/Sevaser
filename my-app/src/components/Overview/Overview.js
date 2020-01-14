@@ -5,15 +5,12 @@ import { ListItemSecondaryAction } from "@material-ui/core";
 
 export default function EventList(props) {
 
-  // debo de poner el estado de las bebidas y las botanas
-  const [botana, setBotana] = useState("");
-  const [bebida, setBebida] = useState("");
   const [desechable, setDesechable] = useState("");
 
   //costo por persona es igual al gasto estimado entre la cantidad de personas ??? me pone 
   //a dudar por que la app no tiene ningun boton para elegir cantidad de personas xD
 
-  const [precioEntrePersona, setPrecioEntrePersona] = useState(0);
+  const [precioEntrePersona, setPrecioEntrePersona] = useState(60);
 
   // la eleccion de perosnas causara un producto entre su cantidad y el precio estimado de los productos???
 
@@ -40,8 +37,8 @@ export default function EventList(props) {
 
     if(comidas[0] != undefined){
       setComidaPrincipal(comidas[0].principal[0])
-      setBotana(botanas[0].nombre)
-      setBebida(bebidas[0].tipo)
+      // setBotana(botanas[0].nombre)
+      // setBebida(bebidas[0].tipo)
       setDesechable(desechables[0])
     }
   })
@@ -72,8 +69,8 @@ export default function EventList(props) {
         evento={comidaPrincipal}
         action={handleClick}
       />
-      <Card data={"Bebida principal"} evento={bebida} action={handleClick} />
-      <Card data={"Botana principal"} evento={botana} action={handleClick} />
+      <Card data={"Bebida principal"} evento={props.bebida} action={handleClick} />
+      <Card data={"Botana principal"} evento={props.botana} action={handleClick} />
       <Card data={"Desechables"} evento={desechable} action={handleClick} />
       <Card evento={"Lista de compras"} action={handleClick} />
     </div>

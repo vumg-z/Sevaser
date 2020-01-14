@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -33,11 +33,14 @@ export default function CheckboxListSecondary(props) {
     setChecked(newChecked);
   };
 
+  // setear la data de comida y bebidas
+  let data = props.data;
+  
   return (
     <div>
       <h4>{props.title}</h4>  
       <List dense className={classes.root}>
-        {[0, 1, 2, 3].map(value => {
+        {data.map(value => {
           const labelId = `checkbox-list-secondary-label-${value}`;
           return (
             <ListItem key={value} button>
@@ -47,7 +50,7 @@ export default function CheckboxListSecondary(props) {
                 src={`/static/images/avatar/${value + 1}.jpg`}
                 />
             </ListItemAvatar> */}
-              <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+              <ListItemText id={labelId} primary={`${value}`} />
               <ListItemSecondaryAction>
                 <Checkbox
                   edge="end"

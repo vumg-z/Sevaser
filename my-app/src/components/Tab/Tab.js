@@ -68,9 +68,14 @@ export default function ScrollableTabsButtonAuto() {
 
   const [evento, setEvento] = React.useState("Carne Asada");
 
+  // estado de las bebidas que vamos a elegir y botanas 
+
+  const [bebida , setBebida] = React.useState("Cerveza")
+  const [botana, setBotana] = React.useState("Churros");
+
   // precio en total es igual a la suma entre todos los precios de los ingredientes
 
-  const [precio, setPrecio] = React.useState(0);
+  const [precio, setPrecio] = React.useState(1500);
 
   // handle change del evento, en esta lineas de codigo voy a manejar la eleccion del evento
 
@@ -78,7 +83,7 @@ export default function ScrollableTabsButtonAuto() {
     setEvento(evento);
   }
 
-  // Estado de la data de los eventos, botanas, y bebidas
+  // Estado de la data de los eventos, botanas, y bebidas DATOS
 
   const [eventosData, setEventosData] = React.useState([]);
   const [botanasData, setBotanasData] = React.useState([]);
@@ -118,6 +123,8 @@ export default function ScrollableTabsButtonAuto() {
       <TabPanel value={value} index={1}>
         <Overview
           evento={evento}
+          bebida={bebida}
+          botana={botana}
           precio={precio}
           data={eventosData}
           botanasData={botanasData}
@@ -125,7 +132,7 @@ export default function ScrollableTabsButtonAuto() {
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Shopping />
+        <Shopping evento={evento} bebida={bebida} botana={botana}/>
       </TabPanel>
     </div>
   );

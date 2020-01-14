@@ -15,30 +15,37 @@ const eventos = [
       "Hamburguesas de Pollo"
     ]
   },
-  {
-    id: 2,
-    nombre: "Fiesta de Cumpleaños",
-    tipo: "Fiesta",
-    principal: ["Tostadas de Ceviche"]
-  },
-  {
-    id: 3,
-    nombre: "Fiesta Sorpresa",
-    tipo: "Fiesta",
-    principal: ["Tortas Ahogadas", "Tortas Gema", "Tortas Cubana"]
-  },
-  {
-    id: 4,
-    nombre: "Posada",
-    tipo: "Fiesta",
-    principal: ["Pretzels", "Galletas", "Pozole"]
-  },
-  {
-    id: 5,
-    nombre: "Despedida de Soltero",
-    tipo: "Fiesta",
-    principal: ["Caviar", "Langosta"]
-  }
+  // {
+  //   id: 2,
+  //   nombre: "Fiesta de Cumpleaños",
+  //   tipo: "Fiesta",
+  //   principal: ["Tostadas de Ceviche"]
+  // },
+  // {
+  //   id: 3,
+  //   nombre: "Fiesta Sorpresa",
+  //   tipo: "Fiesta",
+  //   principal: ["Tortas Ahogadas", "Tortas Gema", "Tortas Cubana"]
+  // },
+  // {
+  //   id: 4,
+  //   nombre: "Posada",
+  //   tipo: "Fiesta",
+  //   principal: ["Pretzels", "Galletas", "Pozole"]
+  // },
+  // {
+  //   id: 5,
+  //   nombre: "Despedida de Soltero",
+  //   tipo: "Fiesta",
+  //   principal: ["Caviar", "Langosta"]
+  // },
+  // {
+  //   id: 6,
+  //   nombre: "Guapayasos Fest",
+  //   tipo: "Fiesta",
+  //   principal: ["pEPINAZOS", "Langosta"]
+  // },
+
 ];
 
 export default eventos;
