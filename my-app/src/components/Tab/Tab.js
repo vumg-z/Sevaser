@@ -79,14 +79,10 @@ export default function ScrollableTabsButtonAuto() {
 
   // handle change del evento, en esta lineas de codigo voy a manejar la eleccion del evento
 
-<<<<<<< HEAD
   function handleClick(evento, value) {
     setEvento(evento)
     setValue(value);
-=======
-  function handleClick(evento) {
-    setEvento(evento);
->>>>>>> 8e6df28e5e1167e7033857c25665ef08cb36414c
+    console.log("hola")
   }
 
   // Estado de la data de los eventos, botanas, y bebidas DATOS
@@ -127,9 +123,6 @@ export default function ScrollableTabsButtonAuto() {
         <Events data={eventosData} handleClick={handleClick} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-<<<<<<< HEAD
-        <Overview evento={evento} handleClick={handleClick}/>
-=======
         <Overview
           evento={evento}
           bebida={bebida}
@@ -138,8 +131,8 @@ export default function ScrollableTabsButtonAuto() {
           data={eventosData}
           botanasData={botanasData}
           bebidasData={bebidasData}
+          handleClick={handleClick}
         />
->>>>>>> 8e6df28e5e1167e7033857c25665ef08cb36414c
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Shopping

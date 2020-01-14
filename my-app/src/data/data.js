@@ -3,8 +3,6 @@ const eventos = [
     id: 0,
     nombre: "Carne Asada",
     tipo: "Fiesta",
-<<<<<<< HEAD
-=======
     principal: ["Arrachera", "Peinecillo", "Carnaza"],
     url: "https://i.imgur.com/E0eBt9M.jpg",
     ingredientes: [
@@ -20,7 +18,6 @@ const eventos = [
       "Frijoles"
     ],
     esenciales: ["Encendedor", "Asador", "Platos", "Cubiertos", "Vasos"]
->>>>>>> 8e6df28e5e1167e7033857c25665ef08cb36414c
   },
   {
     id: 1,
@@ -32,7 +29,21 @@ const eventos = [
       "Hamburguesas de Pollo"
     ],
     url: "https://tvpacifico.mx/recetas/intranet/images/recipes/344-363.jpg",
-    ingredientes: ["Carne para Hamburguesa", "Catsup", "Mayonesa", "Pepinillos", "Pan de Hamburguesa"],
+    ingredientes: [
+      "Carne para Hamburguesa",
+      "Catsup",
+      "Mayonesa",
+      "Pepinillos",
+      "Pan de Hamburguesa",
+      "Lechuga",
+      "Jitomate",
+      "Cebolla",
+      "Piña",
+      "Champiñones",
+      "Tocino",
+      "Queso Amarillo",
+      "Jalapeño"
+    ],
     esenciales: ["platos", "vasos", "silas"]
   },
   {
@@ -57,43 +68,51 @@ const eventos = [
     id: 5,
     nombre: "Churros",
     tipo: "Bebida",
-    ingredientes: ["Churros"]
+    ingredientes: ["Churros", "Sabritas", "Cacahuates", "Pistaches"]
   },
   {
     id: 6,
     nombre: "Fiesta de Cumpleaños",
     tipo: "Fiesta",
-    principal: [
-      "Tostadas de Ceviche",
-      "Tostadas de Ceviche de camaron"
+    principal: ["Tostadas de Ceviche", "Tostadas de Ceviche de camaron"],
+    url:
+      "http://bolerama.com/wp-content/uploads/2018/01/fiesta-de-cumplean%CC%83os-1.jpg",
+    ingredientes: [
+      "Tostadas",
+      "Mayonesa",
+      "Jitomate",
+      "Aguacate",
+      "Limones",
+      "Chile Serrano",
+      "Cebolla",
+      "Galleta Salada"
     ],
-    url: "http://bolerama.com/wp-content/uploads/2018/01/fiesta-de-cumplean%CC%83os-1.jpg",
-    ingredientes: ["Tostadas", "Ceviche", "Mayonesa", "Tomate","Aguacate"],
     esenciales: ["platos", "vasos", "silas"]
   },
   {
     id: 7,
     nombre: "Fiesta de Sorpresa",
     tipo: "Fiesta",
-    principal: [
-      "Tortas Ahogadas", 
-      "Tortas Gema", 
-      "Tortas Cubana"
-    ],
+    principal: ["Tortas Ahogadas", "Tortas Gema", "Tortas Cubana"],
     url: "http://todocumple.info/wp-content/uploads/2018/02/01.jpg",
-    ingredientes: ["Pan", "Carne", "Mayonesa", "Salsa", "Tomate","Aguacate", "Ajo","Sal","Oregano"],
+    ingredientes: [
+      "Pan",
+      "Carne",
+      "Salsa",
+      "Aguacate",
+      "Sal",
+      "Frijoles"
+    ],
     esenciales: ["platos", "vasos", "silas"]
   },
   {
     id: 8,
     nombre: "Despedida de Soltero",
     tipo: "Fiesta",
-    principal: [
-      "Caviar", 
-      "Langosta"      
-    ],
-    url: "http://www.eventz.com.mx/wp-content/uploads/2019/06/DESPEDIDA-DE-SOLTERO.jpg",
-    ingredientes: ["Hielos", "Caviar", "Langosta", "Whisky"  ],
+    principal: ["Caviar", "Langosta"],
+    url:
+      "http://www.eventz.com.mx/wp-content/uploads/2019/06/DESPEDIDA-DE-SOLTERO.jpg",
+    ingredientes: ["Hielos", "Caviar", "Langosta", "Whisky"],
     esenciales: ["platos", "vasos", "silas"]
   }
   // {
