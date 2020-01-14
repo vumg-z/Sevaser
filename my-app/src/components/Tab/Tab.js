@@ -58,6 +58,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ScrollableTabsButtonAuto() {
   const classes = useStyles();
+  
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -82,7 +83,7 @@ export default function ScrollableTabsButtonAuto() {
   function handleClick(evento, value) {
     setEvento(evento)
     setValue(value);
-    console.log("hola")
+    console.log(value)
   }
 
   // Estado de la data de los eventos, botanas, y bebidas DATOS
