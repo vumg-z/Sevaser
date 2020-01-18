@@ -12,4 +12,12 @@ code {
     monospace;
 }
 
+.message {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
 
