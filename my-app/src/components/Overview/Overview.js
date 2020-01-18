@@ -56,14 +56,14 @@ export default function EventList(props) {
 
   return (
     <div>
-      <Card data={"16 Nov"} evento={props.evento} action={handleClick} />
+      <Card data={"Evento"} evento={props.evento} action={handleClick} />
       <Card
         data={"Gasto estimado"}
-        evento={props.precio}
+        evento={"$"+props.precio+".00"}
         action={handleClick}
       />
       <Card data={"Personas"} evento={cantidadDePersonas} action={handleClick} />
-      <Card data={"Costo por persona"} evento={precioEntrePersona} action={handleClick} />
+      <Card data={"Costo por persona"} evento={"$"+precioEntrePersona+".00"} action={handleClick} />
       <Card
         data={"Comida principal"}
         evento={comidaPrincipal}
