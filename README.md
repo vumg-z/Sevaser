@@ -8,6 +8,8 @@ Una vez mis amigos no se ponian de acuerdo para hacer una hamburguesada.
 
 [Live Demo](https://sevaser.herokuapp.com/)
 
+![](images/events.png)
+
 #### Instalacion
 
 1. Descarga el repositorio
