@@ -1,8 +1,6 @@
 # Sevaser
 
-Sevaser o no se vaser
-
-#### Inspiracion
+Sevaser o no se vaser. 
 
 Una vez mis amigos no se ponian de acuerdo para hacer una hamburguesada. 
 
