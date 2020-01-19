@@ -6,10 +6,7 @@ Sevaser o no se vaser
 
 Una vez mis amigos no se ponian de acuerdo para hacer una hamburguesada. 
 
-#### Introduccion
-
-Vaquetapp te dice lo necesario para hacer una carne asada o hamburguesas con tus compas, desde una shop list hasta el precio total dividido por 
-personas.
+[Live Demo](https://sevaser.herokuapp.com/)
 
 #### Instalacion
 
@@ -29,7 +26,21 @@ personas.
 4. Explora 
          
          disfruta :)
+         
+## Contributors
 
-#### Capturas
+* **Uriel Mendoza** - *Initial work* -
+* **Uriel Martinez** - *Initial work* -
+* **Paty Sierra** - *Initial work* -
+* **Cristina Reyes** - *Initial work* -
 
-1. Overview ![](images/overview.jpg)
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* [React.js](https://es.reactjs.org/) - Creacion de interfaz de usuario
+* [Material-UI](https://material-ui.com/) - Componentes de Material Design en React
+* [Material Design](https://material.io/design/) - Sistema de diseño utilizado
+
